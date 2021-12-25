@@ -14,9 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sampleView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
 
 }
 
+extension ViewController: SampleViewDelegate {
+    func textChanged(_ newValue: String) {
+        
+        Label.text = newValue
+        
+    }
+    
+    
+}
