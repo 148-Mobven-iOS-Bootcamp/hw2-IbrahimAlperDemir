@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleView" customModule="HW2" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="38F-a8-ntb"/>
+                <outlet property="textField" destination="COv-CL-smt" id="aJP-RJ-n4i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="752" height="484"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="COv-CL-smt">
+                    <rect key="frame" x="20" y="20" width="712" height="374"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mq-uE-iKA">
+                    <rect key="frame" x="20" y="414" width="712" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="tbg-dh-2Cu"/>
+                    </constraints>
+                    <state key="normal" title="Submit"/>
+                    <connections>
+                        <action selector="onSubmitButtonTapped:" destination="-1" eventType="touchUpInside" id="If2-Yc-Ncv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5mq-uE-iKA" secondAttribute="bottom" constant="20" id="3gJ-mX-gUz"/>
+                <constraint firstItem="COv-CL-smt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FB8-L3-GRE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="COv-CL-smt" secondAttribute="trailing" constant="20" id="FMI-bC-DVq"/>
+                <constraint firstItem="5mq-uE-iKA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="QDR-ev-rr7"/>
+                <constraint firstItem="COv-CL-smt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="e2s-X5-NcC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5mq-uE-iKA" secondAttribute="trailing" constant="20" id="hRZ-1X-R7y"/>
+                <constraint firstItem="5mq-uE-iKA" firstAttribute="top" secondItem="COv-CL-smt" secondAttribute="bottom" constant="20" id="xvL-Q0-9Hn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="73.913043478260875" y="-17.934782608695652"/>
+        </view>
+    </objects>
+</document>
