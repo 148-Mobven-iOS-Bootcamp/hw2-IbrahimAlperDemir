@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sampleView.onTextChanged = { text in
+            self.Label.text = text
+            
+        }
         // Do any additional setup after loading the view.
     }
 

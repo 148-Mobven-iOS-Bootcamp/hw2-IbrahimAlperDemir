@@ -8,8 +8,13 @@
 
 import UIKit
 
+
+
 final class SampleView: UIView {
 
+    var onTextChanged: ((String?) -> Void)?
+    
+    
     @IBOutlet private var contentView: UIView!
     @IBOutlet private weak var textField: UITextField!
 
@@ -32,6 +37,7 @@ final class SampleView: UIView {
 
     @IBAction func onSubmitButtonTapped(_ sender: UIButton) {
         let text = textField.text
+        onTextChanged?(text)
     }
 
 }
