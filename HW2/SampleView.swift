@@ -31,7 +31,13 @@ final class SampleView: UIView {
     }
 
     @IBAction func onSubmitButtonTapped(_ sender: UIButton) {
-        let text = textField.text
+        
+        let text = textField.text ?? ""
+        NotificationCenter.default.post(
+            name: .textValueChanged,
+            object: nil,
+            userInfo: ["newValue": text]
+        )
     }
 
 }
